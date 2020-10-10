@@ -56,7 +56,7 @@ describe('if there are words gussed', () => {
   });
   
   test('correct no of guessed words', () =>{
-    const gussedWordNodes = findByTestAttr(wrapper, 'gussed-word');
-    expect(gussedWordNodes.length).toBe(gussedWords.length);
+    const guessedWordNodes = findByTestAttr(wrapper, 'gussed-word');
+    expect(guessedWordNodes.length).toBe(defaultProps.guessedWords.length);
   });
 });

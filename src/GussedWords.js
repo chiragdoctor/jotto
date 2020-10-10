@@ -10,9 +10,9 @@ const GussedWords = (props) => {
         </span>
     )
   } else {
-      const gussedWordsRow = props.gussedWords.map((word, index) => (
+      const gussedWordsRow = props.guessedWords.map((word, index) => (
         <tr data-test="gussed-word" key={index}>
-            <td>{word.gussedWord}</td>
+            <td>{word.guessedWord}</td>
             <td>{word.letterMatchCount}</td>
         </tr>
       ));
@@ -20,8 +20,8 @@ const GussedWords = (props) => {
       contents = (
         <div data-test="gussed-words">
             <h3>Gussed Words</h3>
-            <table>
-                <thead>
+            <table className="table table-sm">
+                <thead className="thead-light">
                     <tr>
                         <th>Guess</th>
                         <th>Matching Letters</th>
