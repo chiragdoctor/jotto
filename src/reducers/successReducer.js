@@ -1,10 +1,12 @@
-const initialState = {
+import { actionTypes } from '../actions';
 
-}
 
-export default (state = initialState, { type, payload }) => {
-    switch (type) {
-    default:
-        return state
+export default (state = false, {type, payload}) => {
+
+    switch(type) {
+        case actionTypes.CORRECT_GUESS: 
+            return true;
+        default: 
+            return state;  
+        }
     }
-}
